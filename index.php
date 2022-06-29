@@ -1,5 +1,5 @@
 <?php
-include('conexion_db.php') ?>
+include('.\DB\conexion_db.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +8,9 @@ include('conexion_db.php') ?>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS only -->
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 
     <title>Gestión biblioteca</title>
 </head>
@@ -17,9 +19,9 @@ include('conexion_db.php') ?>
     <div class="d-flex justify-content-center flex-column  m-5">
         <h1 class="text-center">Gestión para la biblioteca</h1>
         <h4 class="text-center">Seleccione que desa gestionar</h4>
-        <a href="gestionAutores.php" class="btn btn-info mb-4">Gestión de Autores</a> <br>
-        <a href="gestionLibros.php" class="btn btn-info mb-4">Gestión de Libros</a> <br>
-        <a href="gestionUsuario.php" class="btn btn-info mb-4">Gestión de Usuarios</a> <br>
+        <a href="gestionAutores.php" class="btn btn-info mb-2 mt-2">Gestión de Autores</a> <br>
+        <a href="gestionLibros.php" class="btn btn-info mb-2">Gestión de Libros</a> <br>
+        <a href="gestionUsuario.php" class="btn btn-info mb-2">Gestión de Usuarios</a> <br>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
