@@ -14,39 +14,13 @@ include('conexion_db.php') ?>
 </head>
 
 <body class="container">
-    <form action="guardar_tarea.php" method="POST" class="mb-3">
-        <label for="ltitulo">Titulo:</label><br>
-        <input type="text" id="titulo" name="titulo" class="form-control"><br>
-        <label for="ldescripcion">Descripcion:</label><br>
-        <textarea name="descripcion" cols="30" rows="2" class="form-control"></textarea><br>
-        <button name="bt_guardar_tarea" type="submit" value="Guardar Tarea" class="btn btn-primary">Guardar Tarea</button>
-    </form>
-    <table border="1" cellpadding="2" class="table">
-        <thead>
-            <tr>
-                <th scope="col">Titulo</th>
-                <th scope="col">Descripción</th>
-                <th scope="col">Fecha Creación</th>
-                <th scope="col">Opcion</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php
-            $query = "SELECT * FROM tarea";
-            $resultado = mysqli_query($conn, $query);
-            while ($fila = mysqli_fetch_array($resultado)) { ?>
-                <tr>
-                    <td scope="row"><?php echo $fila['titulo'] ?></td>
-                    <td><?php echo $fila['descripcion'] ?></td>
-                    <td><?php echo $fila['fecha'] ?></td>
-                    <td>
-                        <a href="editar_tarea.php?id=<?php echo $fila['id_tarea'] ?>" class="btn btn-primary">Editar</a>
-                        <a href="eliminar_tarea.php?id=<?php echo $fila['id_tarea'] ?>" class="btn btn-danger">Eliminar</a>
-                    </td>
-                </tr>
-            <?php } ?>
-        </tbody>
-    </table>
+    <div class="d-flex justify-content-center flex-column  m-5">
+        <h1 class="text-center">Gestión para la biblioteca</h1>
+        <h4 class="text-center">Seleccione que desa gestionar</h4>
+        <a href="gestionAutores.php" class="btn btn-info mb-4">Gestión de Autores</a> <br>
+        <a href="gestionLibros.php" class="btn btn-info mb-4">Gestión de Libros</a> <br>
+        <a href="gestionUsuario.php" class="btn btn-info mb-4">Gestión de Usuarios</a> <br>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
