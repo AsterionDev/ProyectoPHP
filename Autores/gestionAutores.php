@@ -40,8 +40,8 @@ include('../DB/conexion_db.php') ?>
                             <td scope="row" class="text-center"><?php echo $fila['Name'] ?></td>
                             <td class="text-center"><?php echo $fila['Country'] ?></td>
                             <td class="text-center">
-                                <a href="editar_tarea.php?id=<?php echo $fila['Id_A'] ?>" class="btn btn-primary">Editar</a>
-                                <a href="eliminar_tarea.php?id=<?php echo $fila['Id_A'] ?>" class="btn btn-danger">Eliminar</a>
+                                <a href="editar_autor.php?id=<?php echo $fila['Id_A'] ?>" class="btn btn-primary">Editar</a>
+                                <a href="eliminar_autor.php?id=<?php echo $fila['Id_A'] ?>" class="btn btn-danger">Eliminar</a>
                             </td>
                         </tr>
                     <?php } ?>
