@@ -3,10 +3,10 @@ $conn = mysqli_connect(
     'localhost',
     'root',
     '',
-    'tareas_db'
+    'biblioteca_db'
 );
 if (!isset($conn)) {
-    echo 'La BD tareas_db no está conectada';
+    echo 'La BD biblioteca_db no está conectada';
 }
 
 $conn->set_charset("utf8");
