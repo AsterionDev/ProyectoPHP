@@ -5,7 +5,8 @@ if (isset($_POST['bt_agregar_autor'])) {
     $nacionalidad = $_POST['nacionalidadAutor'];
 
 
-    $query = "INSERT INTO authors (name, country) VALUES ('$nombre', '$nacionalidad')";
+    $query = "INSERT INTO authors (Name, Country) VALUES ('$nombre', '$nacionalidad')";
+    echo $query;
 
     $resultado = mysqli_query($conn, $query);
     if (!$resultado) {
