@@ -1,5 +1,5 @@
 <?php
-include('.\DB\conexion_db.php') ?>
+include '.\DB\conexion_db.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,6 +22,7 @@ include('.\DB\conexion_db.php') ?>
         <a href="./Autores/gestionAutores.php" class="btn btn-info mb-2 mt-2">Gestión de Autores</a> <br>
         <a href="./Libros/gestionLibros.php" class="btn btn-info mb-2">Gestión de Libros</a> <br>
         <a href="./Usuarios/gestionUsuarios.php" class="btn btn-info mb-2">Gestión de Usuarios</a> <br>
+        <a href="./Prestamos/gestionPrestamos.php" class="btn btn-outline-info mb-2">Gestionar Prestamos</a> <br>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

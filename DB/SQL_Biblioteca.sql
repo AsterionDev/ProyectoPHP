@@ -1,3 +1,7 @@
+CREATE DATABASE biblioteca_db;
+
+USE biblioteca_db;
+
 CREATE TABLE Users (
     Id_U INT NOT NULL AUTO_INCREMENT,
     Name VARCHAR(70) NOT NULL,
