@@ -18,9 +18,10 @@ include('../DB/conexion_db.php') ?>
     <div class="d-flex justify-content-center flex-column  m-5">
         <h1 class="text-center">Gestión de autores</h1>
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-dark mb-4" data-toggle="modal" data-target="#autorModal">
+        <button type="button" class="btn btn-dark mb-2" data-toggle="modal" data-target="#autorModal">
             Agregar autor
         </button>
+        <a href="./../" class="btn btn-outline-dark mb-4"> Volver al Menu Principal</a>
 
         <div class="table-responsive">
             <table border="1" cellpadding="2" class="table table-striped">
@@ -40,8 +41,8 @@ include('../DB/conexion_db.php') ?>
                             <td scope="row" class="text-center"><?php echo $fila['Name'] ?></td>
                             <td class="text-center"><?php echo $fila['Country'] ?></td>
                             <td class="text-center">
-                                <a href="editar_autor.php?id=<?php echo $fila['Id_A'] ?>" class="btn btn-primary">Editar</a>
-                                <a href="eliminar_autor.php?id=<?php echo $fila['Id_A'] ?>" class="btn btn-danger">Eliminar</a>
+                                <a href="editar_autor.php?id=<?php echo $fila['Id_A'] ?>" class="btn btn-outline-primary">Editar</a>
+                                <a href="eliminar_autor.php?id=<?php echo $fila['Id_A'] ?>" class="btn btn-outline-danger">Eliminar</a>
                             </td>
                         </tr>
                     <?php } ?>
