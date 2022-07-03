@@ -41,8 +41,9 @@ include('../DB/conexion_db.php') ?>
                             <td scope="row" class="text-center"><?php echo $fila['Title'] ?></td>
                             <td class="text-center"><?php echo $fila['Name'] ?></td>
                             <td class="text-center">
-                                <a href="editar_libro.php?id=<?php echo $fila['Id_B'] ?>" class="btn btn-outline-primary">Editar</a>
-                                <a href="eliminar_libro.php?id=<?php echo $fila['Id_B'] ?>" class="btn btn-outline-danger">Eliminar</a>
+                                <a href="editar_libro.php?id=<?php echo $fila['Id_B'] ?>" class="btn btn-primary">Editar</a>
+                                <a href="agregar_autores.php?id=<?php echo $fila['Id_B'] ?>" class="btn btn-warning">Agregar Autor</a>
+                                <a href="eliminar_libro.php?id=<?php echo $fila['Id_B'] ?>" class="btn btn-danger">Eliminar</a>
                             </td>
                         </tr>
                     <?php } ?>
