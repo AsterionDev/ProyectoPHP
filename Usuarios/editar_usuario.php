@@ -45,9 +45,9 @@ WHERE Id_U = $id";
 
         <form action="editar_usuario.php?id=<?php echo $_GET['id'] ?>" method="POST">
             <label for="lname">Nombre:</label><br>
-            <input type="text" id="name" name="name" value="<?php echo $Name ?>" class="form-control"><br>
+            <input type="text" id="name" name="name" value="<?php echo $Name ?>" class="form-control" required><br>
             <label for="lemail">Email:</label><br>
-            <input type="text" id="email" name="email" value="<?php echo $Email ?>" class="form-control"><br>
+            <input type="email" id="email" name="email" value="<?php echo $Email ?>" class="form-control" required><br>
             <button name="bt_actualizar" type="submit" class="btn btn-primary">Actualizar Usuario</button>
         </form>
     </div>

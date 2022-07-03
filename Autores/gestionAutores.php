@@ -63,9 +63,9 @@ include('../DB/conexion_db.php') ?>
                     <div class="modal-body">
                         <form action="guardar_autor.php" method="POST" class="mb-3">
                             <label for="lnombreAutor">Nombre:</label><br>
-                            <input type="text" id="nombreAutor" name="nombreAutor" class="form-control"><br>
+                            <input type="text" id="nombreAutor" name="nombreAutor" class="form-control" required><br>
                             <label for="lnacionalidadAutor">Nacionalidad:</label><br>
-                            <input type="text" id="nacionalidadAutor" name="nacionalidadAutor" class="form-control"><br>
+                            <input type="text" id="nacionalidadAutor" name="nacionalidadAutor" class="form-control" required><br>
 
                             <button name="bt_agregar_autor" type="submit" value="Agregar autor" class="btn btn-primary">Agregar autor</button>
                         </form>
@@ -77,25 +77,7 @@ include('../DB/conexion_db.php') ?>
             </div>
         </div>
         <!-- End Modal -->
-        <button type="button" class="btn btn-primary" id="liveToastBtn" onclick="funcion()">Show live toast</button>
-
-        <!-- Toast E -->
-
-        <div class="position-fixed bottom-0 right-0 p-3" style="z-index: 5; right: 0; bottom: 0;">
-            <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true" data-delay="5000">
-                <div class="toast-header">
-                    <img src="..." class="rounded mr-2" alt="...">
-                    <strong class="mr-auto">Biblioteca</strong>
-                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="toast-body">
-                    Eliminando correctamente
-                </div>
-            </div>
-        </div>
-        <!-- End Toast E -->
+        
 
     </div>
 

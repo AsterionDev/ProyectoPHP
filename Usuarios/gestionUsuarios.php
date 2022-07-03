@@ -63,9 +63,9 @@ include('../DB/conexion_db.php') ?>
                     <div class="modal-body">
                         <form action="guardar_usuario.php" method="POST" class="mb-3">
                             <label for="lnombreUsuario">Nombre:</label><br>
-                            <input type="text" id="nombreUsuario" name="nombreUsuario" class="form-control"><br>
+                            <input type="text" id="nombreUsuario" name="nombreUsuario" class="form-control" required><br>
                             <label for="lemailUsuario">Email:</label><br>
-                            <input type="email" id="emailUsuario" name="emailUsuario" class="form-control"><br>
+                            <input type="email" id="emailUsuario" name="emailUsuario" class="form-control" required><br>
 
                             <button name="btn_agregar_usuario" type="submit" value="Agregar usuario" class="btn btn-primary">Agregar usuario</button>
                         </form>

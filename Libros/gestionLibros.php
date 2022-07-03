@@ -64,7 +64,7 @@ include('../DB/conexion_db.php') ?>
                     <div class="modal-body">
                         <form action="guardar_libro.php" method="POST" class="mb-3">
                             <label for="lnombrelibro">Titulo:</label><br>
-                            <input type="text" id="nombrelibro" name="nombrelibro" class="form-control"><br>
+                            <input type="text" id="nombrelibro" name="nombrelibro" class="form-control" required><br>
                             <button name="bt_agregar_libro" type="submit" value="Agregar libro" class="btn btn-primary">Agregar libro</button>
                         </form>
                     </div>

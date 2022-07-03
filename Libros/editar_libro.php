@@ -42,7 +42,7 @@ if (isset($_POST['bt_actualizar'])) {
 
         <form action="editar_libro.php?id=<?php echo $_GET['id'] ?>" method="POST">
             <label for="lname">Titulo:</label><br>
-            <input type="text" id="name" name="name" value="<?php echo $name ?>" class="form-control"><br>
+            <input type="text" id="name" name="name" value="<?php echo $name ?>" class="form-control" required><br>
             <button name="bt_actualizar" type="submit" class="btn btn-primary">Actualizar libro</button>
         </form>
     </div>

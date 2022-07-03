@@ -45,9 +45,9 @@ WHERE id_a = $id";
 
         <form action="editar_autor.php?id=<?php echo $_GET['id'] ?>" method="POST">
             <label for="lname">Nombre:</label><br>
-            <input type="text" id="name" name="name" value="<?php echo $name ?>" class="form-control"><br>
+            <input type="text" id="name" name="name" value="<?php echo $name ?>" class="form-control" required><br>
             <label for="lcountry">Pais:</label><br>
-            <input type="text" id="country" name="country" value="<?php echo $country ?>" class="form-control"><br>
+            <input type="text" id="country" name="country" value="<?php echo $country ?>" class="form-control" required><br>
             <button name="bt_actualizar" type="submit" class="btn btn-primary">Actualizar Autor</button>
         </form>
     </div>
