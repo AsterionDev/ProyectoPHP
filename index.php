@@ -20,7 +20,7 @@ include('.\DB\conexion_db.php') ?>
         <h1 class="text-center">Gestión para la biblioteca</h1>
         <h4 class="text-center">Seleccione que desa gestionar</h4>
         <a href="./Autores/gestionAutores.php" class="btn btn-info mb-2 mt-2">Gestión de Autores</a> <br>
-        <a href="gestionLibros.php" class="btn btn-info mb-2">Gestión de Libros</a> <br>
+        <a href="./Libros/gestionLibros.php" class="btn btn-info mb-2">Gestión de Libros</a> <br>
         <a href="gestionUsuario.php" class="btn btn-info mb-2">Gestión de Usuarios</a> <br>
     </div>
 
