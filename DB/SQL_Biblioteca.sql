@@ -30,7 +30,7 @@ CREATE TABLE UserBooks (
     BookId  INT NOT NULL,
     LoanDate Date,
     ExDate Date,
-    PRIMARY KEY (UserId,UserBooks,LoanDate),
+    PRIMARY KEY (UserId,BookId,LoanDate),
     FOREIGN KEY (UserId) REFERENCES Users(Id_U) ON DELETE CASCADE,
     FOREIGN KEY (BookId) REFERENCES Books(Id_B) ON DELETE CASCADE
 );
@@ -147,10 +147,6 @@ VALUES
     (22,21)
 ;
 
-UserId INT NOT NULL,
-    BookId  INT NOT NULL,
-    LoanDate Date,
-    ExDate Date,
 
 INSERT INTO UserBooks
     (UserId, BookId, LoanDate, ExDate)
@@ -160,6 +156,6 @@ VALUES
     (3, 1, "2022-06-23", "2022-07-23"),
     (4, 2, "2022-06-23", "2022-07-23"),
     (5, 2, "2022-06-23", "2022-07-23"),
-    (22,21,"2022-06-23", "2022-07-23")
+    (21,21,"2022-06-23", "2022-07-23")
 ;
 
