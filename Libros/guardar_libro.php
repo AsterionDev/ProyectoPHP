@@ -8,7 +8,8 @@ if (isset($_POST['bt_agregar_libro'])) {
 
     $resultado = mysqli_query($conn, $query);
     if (!$resultado) {
-        die("Fallo la creación del libro ");
-    }
-    header("Location: gestionLibros.php");
+        header("Location: gestionLibros.php?status=Fallo");
+    } else {
+        header("Location: gestionLibros.php?status=Exito");
+    };
 }

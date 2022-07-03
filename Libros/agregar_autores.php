@@ -16,8 +16,12 @@ if (isset($_POST['bt_agregarAutor'])) {
     $author = $_POST['selectedAuthor'];
     $query = "INSERT INTO booksauthors (AuthorId, BookId) VALUES ('$author','$id')";
 
-    mysqli_query($conn, $query);
-    header("Location: gestionLibros.php");
+    $resultado = mysqli_query($conn, $query);
+    if (!$resultado) {
+        header("Location: gestionLibros.php?status=Fallo");
+    } else {
+        header("Location: gestionLibros.php?status=Exito");
+    };
 }
 ?>
 <!DOCTYPE html>
