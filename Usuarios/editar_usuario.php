@@ -19,8 +19,12 @@ if (isset($_POST['bt_actualizar'])) {
     $query = "UPDATE Users SET Name = '$Name',Email = '$Email'
 WHERE Id_U = $id";
 
-    mysqli_query($conn, $query);
-    header("Location: gestionUsuarios.php");    
+    $resultado = mysqli_query($conn, $query);
+    if (!$resultado) {
+        header("Location: gestionUsuarios.php?status=Fallo");
+    } else {
+        header("Location: gestionUsuarios.php?status=Exito");
+    };
 }
 ?>
 <!DOCTYPE html>

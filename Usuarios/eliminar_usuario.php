@@ -7,8 +7,8 @@ if (isset($_GET['id'])) {
 
     $resultado = mysqli_query($conn, $query);
     if (!$resultado) {
-        echo $query;
-        die('Fallo eliminando el usuario');
-    }
-    header('Location: gestionUsuarios.php');
+        header("Location: gestionUsuarios.php?status=Fallo");
+    } else {
+        header("Location: gestionUsuarios.php?status=Exito");
+    };
 }

@@ -7,8 +7,8 @@ if (isset($_GET['id'])) {
 
   $resultado = mysqli_query($conn, $query);
   if (!$resultado) {
-    echo $query;
-    die('Fallo eliminando el libro');
-  }
-  header('Location: gestionLibros.php');
+    header("Location: gestionLibros.php?status=Fallo");
+  } else {
+    header("Location: gestionLibros.php?status=Exito");
+  };
 }

@@ -19,8 +19,12 @@ if (isset($_POST['bt_actualizar'])) {
     $query = "UPDATE authors SET Name = '$name',Country = '$country'
 WHERE id_a = $id";
 
-    mysqli_query($conn, $query);
-    header("Location: gestionAutores.php");
+    $resultado = mysqli_query($conn, $query);
+    if (!$resultado) {
+        header("Location: gestionAutores.php?status=Fallo");
+    } else {
+        header("Location: gestionAutores.php?status=Exito");
+    };
 }
 ?>
 <!DOCTYPE html>

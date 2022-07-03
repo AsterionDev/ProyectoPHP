@@ -15,9 +15,12 @@ if (isset($_POST['bt_actualizar'])) {
     $id = $_GET['id'];
     $name = $_POST['name'];
     $query = "UPDATE books SET title = '$name' WHERE id_b = $id";
-
-    mysqli_query($conn, $query);
-    header("Location: gestionLibros.php");
+    $resultado = mysqli_query($conn, $query);
+    if (!$resultado) {
+        header("Location: gestionLibros.php?status=Fallo");
+    } else {
+        header("Location: gestionLibros.php?status=Exito");
+    };
 }
 ?>
 <!DOCTYPE html>

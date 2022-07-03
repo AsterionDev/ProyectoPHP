@@ -9,7 +9,8 @@ if (isset($_POST['bt_agregar_autor'])) {
 
     $resultado = mysqli_query($conn, $query);
     if (!$resultado) {
-        die("Fallo la creación del autor ");
-    }
-    header("Location: gestionAutores.php");
+        header("Location: gestionAutores.php?status=Fallo");
+    } else {
+        header("Location: gestionAutores.php?status=Exito");
+    };
 }
