@@ -9,9 +9,12 @@ if (isset($_POST['bt_agregarPrestamo'])) {
     $date = date('Y-m-d');
     $dateExp = date('Y-m-d', strtotime($date . '+ ' . $month . ' month'));
     $query = "INSERT INTO UserBooks (UserId, BookId, LoanDate, ExDate) VALUES ('$user','$book','$date','$dateExp');";
-    echo $query;
-    mysqli_query($conn, $query);
-    // header('Location: ./../');
+    $resultado = mysqli_query($conn, $query);
+    if (!$resultado) {
+        header('Location: gestionPrestamos.php?status=Fallo');
+    } else {
+        header('Location: gestionPrestamos.php?status=Exito');
+    }
 }
 ?>
 <!DOCTYPE html>

@@ -1,6 +1,6 @@
 <?php
 //Antes que todo hay que incluir la conexión para que esté disponible en la página
-include('../DB/conexion_db.php') ?>
+include '../DB/conexion_db.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,19 +34,31 @@ include('../DB/conexion_db.php') ?>
                 </thead>
                 <tbody>
                     <?php
-                    $query = "SELECT Id_B, Title, Name FROM books b left join booksauthors ba on b.Id_B = ba.BookId left join authors a on ba.AuthorId = a.Id_A";
+                    $query =
+                        'SELECT Id_B, Title, Name FROM books b left join booksauthors ba on b.Id_B = ba.BookId left join authors a on ba.AuthorId = a.Id_A';
                     $resultado = mysqli_query($conn, $query);
                     while ($fila = mysqli_fetch_array($resultado)) { ?>
                         <tr>
-                            <td scope="row" class="text-center"><?php echo $fila['Title'] ?></td>
-                            <td class="text-center"><?php echo $fila['Name'] ?></td>
+                            <td scope="row" class="text-center"><?php echo $fila[
+                                'Title'
+                            ]; ?></td>
+                            <td class="text-center"><?php echo $fila[
+                                'Name'
+                            ]; ?></td>
                             <td class="text-center">
-                                <a href="editar_libro.php?id=<?php echo $fila['Id_B'] ?>" class="btn btn-primary">Editar</a>
-                                <a href="agregar_autores.php?id=<?php echo $fila['Id_B'] ?>" class="btn btn-warning">Agregar Autor</a>
-                                <a href="eliminar_libro.php?id=<?php echo $fila['Id_B'] ?>" class="btn btn-danger">Eliminar</a>
+                                <a href="editar_libro.php?id=<?php echo $fila[
+                                    'Id_B'
+                                ]; ?>" class="btn btn-outline-info">Editar</a>
+                                <a href="agregar_autores.php?id=<?php echo $fila[
+                                    'Id_B'
+                                ]; ?>" class="btn btn-outline-primary">Agregar Autor</a>
+                                <a href="eliminar_libro.php?id=<?php echo $fila[
+                                    'Id_B'
+                                ]; ?>" class="btn btn-outline-danger">Eliminar</a>
                             </td>
                         </tr>
-                    <?php } ?>
+                    <?php }
+                    ?>
                 </tbody>
             </table>
         </div>
@@ -114,7 +126,7 @@ include('../DB/conexion_db.php') ?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <?php if (isset($_GET['status'])) {
-        if ($_GET['status'] == "Exito") {
+        if ($_GET['status'] == 'Exito') {
             echo "<script>    $('#toastExito').toast('show');                </script>";
         } else {
             echo "<script>    $('#toastFallo').toast('show');                </script>";
